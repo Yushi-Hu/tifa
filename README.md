@@ -1,7 +1,7 @@
 # TIFA
 TIFA: Accurate and Interpretable Text-to-Image Evaluation with Question Answering
 
-## Components (will be updated soon!)
+## Components (Coming soon in two days!)
 
 1. TIFA v1.0 benchmark
 
