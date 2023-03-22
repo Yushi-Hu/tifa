@@ -31,7 +31,11 @@ The text inputs are organized as follows:
 ]
 ```
 
-The GPT-3 pre-generated TIFA v1.0 question and answers are in `tifa_v1.0/tifa_v1.0_question_answers.json`. The question and answers are organized as follows:
+The GPT-3 pre-generated TIFA v1.0 question and answers are in `tifa_v1.0/tifa_v1.0_question_answers.json`. 
+
+You can also <a href="https://raw.githubusercontent.com/Yushi-Hu/tifa/main/tifa_v1.0/tifa_v1.0_question_answers.json" download>Download here</a>
+
+The question and answers are organized as follows:
 
 
 ```console
