@@ -22,11 +22,11 @@ Want to submit results on the leaderboard? Please email the authors.
 ## Quick Links
 - [Installation](#Installation)
 - [Quick Start](#quick-start)
-- [TIFA v1.0 Benchmark](#tifa-v1.0-benchmark)
+- [TIFA v1.0 Benchmark](#tifa-v10-benchmark)
 - [TIFA on customized benchmark](#tifa-on-customized-benchmark)
 - [VQA modules](#vqa-modules)
 - [Question Generation modules](#question-generation-modules)
-    - [Question Generation with GPT-3.5](#quetion-generation-with-gpt-3.5)
+    - [Question Generation with GPT-3.5](#quetion-generation-with-gpt-3)
     - [Filtering with UnifiedQA](#filter-with-unifiedqa)
 - [TIFA on arbitrary image and text](#tifa-on-arbitrary-image-and-text)
 
@@ -50,7 +50,7 @@ You can also <a href="https://raw.githubusercontent.com/Yushi-Hu/tifa/main/tifa_
 
 ## Question Generation Modules
 
-### Question generation with GPT 3.5
+### Question generation with GPT 3
 
 ### Filter with UnifiedQA
 
