@@ -175,7 +175,7 @@ print(result)
 ```
 
 
-## Details: Customized benchmark format
+## Details: The text inputs format and the question-answer pairs format
 
 The text inputs are organized as follows:
 ```console
