@@ -1,4 +1,4 @@
-<img src="static/tifa.png" width="50"># TIFA: Accurate and Interpretable Text-to-Image Evaluation with Question Answering
+#<img src="static/tifa.png" width="50"> TIFA: Accurate and Interpretable Text-to-Image Evaluation with Question Answering
 
 This repository contains the code and models for our paper [TIFA: Accurate and Interpretable Text-to-Image Evaluation with Question Answering](https://arxiv.org/abs/2303.11897). Please refer to the [project page](https://tifa-benchmark.github.io/) for a quick overview.
 
