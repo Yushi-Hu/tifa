@@ -32,6 +32,22 @@ Want to submit results on the leaderboard? Please email the authors.
 
 ## Installation
 
+First clone this repo for the examples, readme, etc.
+```bash
+git clone https://github.com/Yushi-Hu/tifa.git
+```
+
+The code and dependencies can be installed by PyPI
+```bash
+pip install tifascore
+```
+
+Or you can manually build it from this repo
+```bash
+pip install -r requirements.txt
+pip install -e .
+```
+
 ## Quick Start
 
 ## TIFA v1.0 Benchmark
