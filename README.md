@@ -2,7 +2,7 @@
 
 This repository contains the code and models for our paper [TIFA: Accurate and Interpretable Text-to-Image Evaluation with Question Answering](https://arxiv.org/abs/2303.11897). Please refer to the [project page](https://tifa-benchmark.github.io/) for a quick overview.
 
-<img src="static/tifa_webteaser.png" width="800">
+<img src="static/tifa_webteaser.jpeg" width="800">
 
 ## Components (Coming soon in two days!)
 
