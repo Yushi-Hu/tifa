@@ -12,6 +12,7 @@ We have pre-generated the questions with OpenAI APIs, such that users only need 
 <img src="static/tifa_leaderboard.png" width="600">
 Want to submit results on the leaderboard? Please email the authors.
 
+
 **************************** **Updates** ****************************
 
 * TODO: Release Flan-T5 fine-tuned for question generation so that users can generate questions without OpenAI API. Release Huggingface demo.
@@ -23,7 +24,6 @@ Want to submit results on the leaderboard? Please email the authors.
 - [Installation](#Installation)
 - [Quick Start](#quick-start)
 - [TIFA v1.0 Benchmark](#tifa-v10-benchmark)
-- [TIFA on customized benchmark](#tifa-on-customized-benchmark)
 - [VQA modules](#vqa-modules)
 - [Question Generation modules](#question-generation-modules)
     - [Question Generation with GPT-3.5](#quetion-generation-with-gpt-35)
@@ -50,6 +50,34 @@ pip install -e .
 
 ## Quick Start
 
+To benchmark your own text-to-image model:
+
+Suppose we are benchmarking on the text inputs in `sample/sample_text_inputs.json`. The questions are in `sample/sample_question_answers.json`.
+
+1. Generate the images from TIFA v1.0 text inputs in `sample/sample_text_inputs.json`.
+2. Make a JSON file that points out the location of each image. We include an example `sample/sample_imgs.json`.
+3. Run the following code
+
+```python
+from tifascore import tifa_score_benchmark
+
+# We recommend using mplug-large. Other vqa models supported: git-base, git-large, blip-base, blip-large, vilt, ofa-large, promptcap-t5large, blip2-flant5xl
+results = tifa_score_benchmark("mplug-large", "sample/sample_question_answers.json", "sample/sample_imgs.json")
+
+# save the results. Already in the sample folder
+with open("sample/sample_evaluation_result.json", "w") as f:
+    json.dump(results, f, indent=4)
+```
+
+### Run on TIFA v1.0 benchmark
+To evaluate on TIFA v1.0 benchmark, generate images for text inputs in `tifa_v1.0/tifa_v1.0_text_inputs.json`. and run
+```python
+results = tifa_score_benchmark("mplug-large", "`tifa_v1.0/tifa_v1.0_question_answers.json", "[YOUR IMAGE PATH]")
+```
+
+
+
+
 ## TIFA v1.0 Benchmark
 
 TIFA v1.0 text inputs are in `tifa_v1.0/tifa_v1.0_text_inputs.json` 
@@ -60,7 +88,6 @@ The GPT-3 pre-generated TIFA v1.0 question and answers are in `tifa_v1.0/tifa_v1
 
 You can also <a href="https://raw.githubusercontent.com/Yushi-Hu/tifa/main/tifa_v1.0/tifa_v1.0_question_answers.json" download>Download here</a>
 
-## TIFA on Customized Benchmark
 
 ## VQA Modules
 
