@@ -20,7 +20,7 @@ if __name__ == "__main__":
     #####################################
     
     # prepare the models
-    openai.api_key = "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"
+    openai.api_key = "[OpenAI key]"
     unifiedqa_model = UnifiedQAModel("allenai/unifiedqa-v2-t5-large-1363200")
     vqa_model = VQAModel("mplug-large")
     
