@@ -1,0 +1,12 @@
+numpy
+torch
+tqdm
+word2number
+Pillow
+openai>=0.27.2
+transformers>=4.27.3
+fairseq
+evaluate
+salesforce-lavis
+modelscope[multi-modal]
+promptcap>=1.0.3
