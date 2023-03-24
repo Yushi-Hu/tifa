@@ -54,7 +54,7 @@ To benchmark your own text-to-image model:
 
 Suppose we are benchmarking on the text inputs in `sample/sample_text_inputs.json`. The questions are in `sample/sample_question_answers.json`.
 
-1. Generate the images from `sample/sample_text_inputs.json`.
+1. Generate the images from `sample/sample_text_inputs.json`. We have included sample images in `sample/`
 2. Make a JSON file that points out the location of each image. We include an example `sample/sample_imgs.json`.
 3. Run the following code
 
