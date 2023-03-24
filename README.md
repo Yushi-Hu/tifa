@@ -57,10 +57,11 @@ Suppose we are benchmarking on the text inputs in `sample/sample_text_inputs.jso
 
 1. Generate the images from `sample/sample_text_inputs.json`. We have included sample images in `sample/`
 2. Make a JSON file that points out the location of each image. We include an example `sample/sample_imgs.json`.
-3. Run the following code
+3. Run the following code. The output is in `sample/sample_evaluation_result.json`.
 
 ```python
 from tifascore import tifa_score_benchmark
+import json
 
 # We recommend using mplug-large
 results = tifa_score_benchmark("mplug-large", "sample/sample_question_answers.json", "sample/sample_imgs.json")
