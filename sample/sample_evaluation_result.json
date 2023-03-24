@@ -1,0 +1,332 @@
+{
+    "tifa_average": 0.8125,
+    "tifa_stdev": 0.2651650429449553,
+    "accuracy_by_type": {
+        "animal/human": 0.75,
+        "object": 1,
+        "location": 1,
+        "activity": 1,
+        "color": 1,
+        "counting": 0.3333333333333333
+    },
+    "question_details": {
+        "coco_301091": {
+            "is this a surfer?": {
+                "id": "coco_301091",
+                "caption": "On a gray day a surfer carrying a white board walks on a beach.",
+                "question": "is this a surfer?",
+                "choices": [
+                    "yes",
+                    "no"
+                ],
+                "answer": "yes",
+                "element_type": "animal/human",
+                "element": "surfer",
+                "coco_val_id": "380711",
+                "free_form_vqa": "yes",
+                "multiple_choice_vqa": "yes",
+                "scores": 1
+            },
+            "who is on the beach?": {
+                "id": "coco_301091",
+                "caption": "On a gray day a surfer carrying a white board walks on a beach.",
+                "question": "who is on the beach?",
+                "choices": [
+                    "surfer",
+                    "swimmer",
+                    "diver",
+                    "skier"
+                ],
+                "answer": "surfer",
+                "element_type": "animal/human",
+                "element": "surfer",
+                "coco_val_id": "380711",
+                "free_form_vqa": "surfer",
+                "multiple_choice_vqa": "surfer",
+                "scores": 1
+            },
+            "is the person carrying a board?": {
+                "id": "coco_301091",
+                "caption": "On a gray day a surfer carrying a white board walks on a beach.",
+                "question": "is the person carrying a board?",
+                "choices": [
+                    "yes",
+                    "no"
+                ],
+                "answer": "yes",
+                "element_type": "object",
+                "element": "board",
+                "coco_val_id": "380711",
+                "free_form_vqa": "yes",
+                "multiple_choice_vqa": "yes",
+                "scores": 1
+            },
+            "is this a beach?": {
+                "id": "coco_301091",
+                "caption": "On a gray day a surfer carrying a white board walks on a beach.",
+                "question": "is this a beach?",
+                "choices": [
+                    "yes",
+                    "no"
+                ],
+                "answer": "yes",
+                "element_type": "location",
+                "element": "beach",
+                "coco_val_id": "380711",
+                "free_form_vqa": "yes",
+                "multiple_choice_vqa": "yes",
+                "scores": 1
+            },
+            "what type of place is this?": {
+                "id": "coco_301091",
+                "caption": "On a gray day a surfer carrying a white board walks on a beach.",
+                "question": "what type of place is this?",
+                "choices": [
+                    "beach",
+                    "park",
+                    "forest",
+                    "mountain"
+                ],
+                "answer": "beach",
+                "element_type": "location",
+                "element": "beach",
+                "coco_val_id": "380711",
+                "free_form_vqa": "beach",
+                "multiple_choice_vqa": "beach",
+                "scores": 1
+            },
+            "is the surfer carrying something?": {
+                "id": "coco_301091",
+                "caption": "On a gray day a surfer carrying a white board walks on a beach.",
+                "question": "is the surfer carrying something?",
+                "choices": [
+                    "yes",
+                    "no"
+                ],
+                "answer": "yes",
+                "element_type": "activity",
+                "element": "carrying",
+                "coco_val_id": "380711",
+                "free_form_vqa": "yes",
+                "multiple_choice_vqa": "yes",
+                "scores": 1
+            },
+            "is the surfer walking on the beach?": {
+                "id": "coco_301091",
+                "caption": "On a gray day a surfer carrying a white board walks on a beach.",
+                "question": "is the surfer walking on the beach?",
+                "choices": [
+                    "yes",
+                    "no"
+                ],
+                "answer": "yes",
+                "element_type": "activity",
+                "element": "walks",
+                "coco_val_id": "380711",
+                "free_form_vqa": "yes",
+                "multiple_choice_vqa": "yes",
+                "scores": 1
+            },
+            "is the day gray?": {
+                "id": "coco_301091",
+                "caption": "On a gray day a surfer carrying a white board walks on a beach.",
+                "question": "is the day gray?",
+                "choices": [
+                    "yes",
+                    "no"
+                ],
+                "answer": "yes",
+                "element_type": "color",
+                "element": "gray",
+                "coco_val_id": "380711",
+                "free_form_vqa": "yes",
+                "multiple_choice_vqa": "yes",
+                "scores": 1
+            },
+            "what color is the sky?": {
+                "id": "coco_301091",
+                "caption": "On a gray day a surfer carrying a white board walks on a beach.",
+                "question": "what color is the sky?",
+                "choices": [
+                    "gray",
+                    "black",
+                    "red",
+                    "blue"
+                ],
+                "answer": "gray",
+                "element_type": "color",
+                "element": "gray",
+                "coco_val_id": "380711",
+                "free_form_vqa": "gray",
+                "multiple_choice_vqa": "gray",
+                "scores": 1
+            },
+            "is the board white?": {
+                "id": "coco_301091",
+                "caption": "On a gray day a surfer carrying a white board walks on a beach.",
+                "question": "is the board white?",
+                "choices": [
+                    "yes",
+                    "no"
+                ],
+                "answer": "yes",
+                "element_type": "color",
+                "element": "white",
+                "coco_val_id": "380711",
+                "free_form_vqa": "yes",
+                "multiple_choice_vqa": "yes",
+                "scores": 1
+            },
+            "what color is the board?": {
+                "id": "coco_301091",
+                "caption": "On a gray day a surfer carrying a white board walks on a beach.",
+                "question": "what color is the board?",
+                "choices": [
+                    "white",
+                    "black",
+                    "red",
+                    "blue"
+                ],
+                "answer": "white",
+                "element_type": "color",
+                "element": "white",
+                "coco_val_id": "380711",
+                "free_form_vqa": "white",
+                "multiple_choice_vqa": "white",
+                "scores": 1
+            }
+        },
+        "drawbench_52": {
+            "are there cats?": {
+                "id": "drawbench_52",
+                "caption": "Three cats and two dogs sitting on the grass.",
+                "question": "are there cats?",
+                "choices": [
+                    "yes",
+                    "no"
+                ],
+                "answer": "yes",
+                "element_type": "animal/human",
+                "element": "cats",
+                "free_form_vqa": "yes",
+                "multiple_choice_vqa": "yes",
+                "scores": 1
+            },
+            "are there dogs?": {
+                "id": "drawbench_52",
+                "caption": "Three cats and two dogs sitting on the grass.",
+                "question": "are there dogs?",
+                "choices": [
+                    "yes",
+                    "no"
+                ],
+                "answer": "yes",
+                "element_type": "animal/human",
+                "element": "dogs",
+                "free_form_vqa": "no",
+                "multiple_choice_vqa": "no",
+                "scores": 0
+            },
+            "is there grass?": {
+                "id": "drawbench_52",
+                "caption": "Three cats and two dogs sitting on the grass.",
+                "question": "is there grass?",
+                "choices": [
+                    "yes",
+                    "no"
+                ],
+                "answer": "yes",
+                "element_type": "object",
+                "element": "grass",
+                "free_form_vqa": "yes",
+                "multiple_choice_vqa": "yes",
+                "scores": 1
+            },
+            "what is the animals sitting on?": {
+                "id": "drawbench_52",
+                "caption": "Three cats and two dogs sitting on the grass.",
+                "question": "what is the animals sitting on?",
+                "choices": [
+                    "grass",
+                    "leaves",
+                    "twigs",
+                    "sand"
+                ],
+                "answer": "grass",
+                "element_type": "object",
+                "element": "grass",
+                "free_form_vqa": "grass",
+                "multiple_choice_vqa": "grass",
+                "scores": 1
+            },
+            "are the animals sitting?": {
+                "id": "drawbench_52",
+                "caption": "Three cats and two dogs sitting on the grass.",
+                "question": "are the animals sitting?",
+                "choices": [
+                    "yes",
+                    "no"
+                ],
+                "answer": "yes",
+                "element_type": "activity",
+                "element": "sitting",
+                "free_form_vqa": "yes",
+                "multiple_choice_vqa": "yes",
+                "scores": 1
+            },
+            "how many cats are in the picture?": {
+                "id": "drawbench_52",
+                "caption": "Three cats and two dogs sitting on the grass.",
+                "question": "how many cats are in the picture?",
+                "choices": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "answer": "3",
+                "element_type": "counting",
+                "element": "three",
+                "free_form_vqa": "3",
+                "multiple_choice_vqa": "3",
+                "scores": 1
+            },
+            "are there two dogs?": {
+                "id": "drawbench_52",
+                "caption": "Three cats and two dogs sitting on the grass.",
+                "question": "are there two dogs?",
+                "choices": [
+                    "yes",
+                    "no"
+                ],
+                "answer": "yes",
+                "element_type": "counting",
+                "element": "two",
+                "free_form_vqa": "no",
+                "multiple_choice_vqa": "no",
+                "scores": 0
+            },
+            "how many dogs are in the picture?": {
+                "id": "drawbench_52",
+                "caption": "Three cats and two dogs sitting on the grass.",
+                "question": "how many dogs are in the picture?",
+                "choices": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "answer": "2",
+                "element_type": "counting",
+                "element": "two",
+                "free_form_vqa": "0",
+                "multiple_choice_vqa": "1",
+                "scores": 0
+            }
+        }
+    },
+    "caption_scores": {
+        "coco_301091": 1,
+        "drawbench_52": 0.625
+    }
+}
