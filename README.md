@@ -61,16 +61,15 @@ Suppose we are benchmarking on the text inputs in `sample/sample_text_inputs.jso
 ```python
 from tifascore import tifa_score_benchmark
 
-# We recommend using mplug-large. 
-#Other vqa models supported: git-base, git-large, blip-base, blip-large, vilt, ofa-large, promptcap-t5large, blip2-flant5xl
+# We recommend using mplug-large
 results = tifa_score_benchmark("mplug-large", "sample/sample_question_answers.json", "sample/sample_imgs.json")
 
-# save the results. Already in the sample folder
+# save the results
 with open("sample/sample_evaluation_result.json", "w") as f:
     json.dump(results, f, indent=4)
 ```
 
-### Run on TIFA v1.0 benchmark
+### Benchmakr on TIFA v1.0 benchmark
 To evaluate on TIFA v1.0 benchmark, generate images for text inputs in `tifa_v1.0/tifa_v1.0_text_inputs.json`. and run
 ```python
 results = tifa_score_benchmark("mplug-large", "`tifa_v1.0/tifa_v1.0_question_answers.json", "[YOUR IMAGE PATH]")
@@ -100,17 +99,81 @@ from tifascore import VQAModel
 # automatically on GPU if detect CUDA.
 model = VQAModel("mplug-large")
 
-# perform 
+# perform free-form VQA
+print(model.vqa("sample/drawbench_8.jpg", "What is the fruit?"))
+# bananas
+
+# perform multiple-choice VQA
+print(model.multiple_choice_vqa("sample/drawbench_8.jpg", "What is the color of the banana?", choices=['black', 'yellow', 'red', 'green']))
+# {'free_form_answer': 'yellow', 'multiple_choice_answer': 'yellow'}
 ```
 
 
 ## Question Generation Modules
 
+TIFA allos users to generate questions on their own text inputs. The question generation contains two part. First is question generation with GPT-3. And then we filter the questions with UnifiedQA.
+We will release a fine-tuned FlanT5 so that the users without OpenAI API can generate questions locally. However, the question quality will be lower than GPT-3 generated one.
+
 ### Question generation with GPT 3.5
+
+Notice that since code-davinci-002 is deprecated, we rewrite our code with gpt-3.5-turbo. Since the input length limit is 4097, which is smaller than Codex's, we reduced the number of in-context examples. Thus, the questions will be slightly different from the ones in TIFA v1.0 benchmark.
+
+```python
+import openai
+from tifascore import get_question_and_answers
+
+openai.api_key = "[Your OpenAI Key]"
+
+text = "a black colored banana."
+gpt3_questions = get_question_and_answers(text)
+# gpt3_questions is a list of question answer pairs with the same format as sample/sample_question_answers.json
+```
 
 ### Filter with UnifiedQA
 
+To double-check the questions, we also run UnifiedQA to filter GPT-3 generated questions.
+
+```python
+import openai
+from tifascore import UnifiedQAModel, filter_question_and_answers
+
+unifiedqa_model = UnifiedQAModel("allenai/unifiedqa-v2-t5-large-1363200")
+
+# filter gpt3_questions
+filtered_questions = filter_question_and_answers(unifiedqa_model, gpt3_questions)
+```
+
 ## TIFA on arbitary image and text
+
+Combining above modules, we can compute TIFA on arbitary image-text pair.
+
+```python
+from tifascore import get_question_and_answers, filter_question_and_answers, UnifiedQAModel, tifa_score_single, VQAModel
+import openai
+
+openai.api_key = "[Your OpenAI Key]"
+unifiedqa_model = UnifiedQAModel("allenai/unifiedqa-v2-t5-large-1363200")
+    vqa_model = VQAModel("mplug-large")
+    
+    
+    img_path = "sample/drawbench_8.jpg"
+    text = "a black colored banana."
+    
+    # Generate questions with GPT-3.5-turbo
+    gpt3_questions = get_question_and_answers(text)
+    
+    # Filter questions with UnifiedQA
+    filtered_questions = filter_question_and_answers(unifiedqa_model, gpt3_questions)
+    
+    # See the questions
+    print(filtered_questions)
+
+    # calucluate TIFA score
+    result = tifa_score_single(vqa_model, filtered_questions, img_path)
+    print(f"TIFA score is {result['tifa_score']}")   # 0.33
+    print(result)
+```
+
 
 ## Details: Customized benchmark format
 
