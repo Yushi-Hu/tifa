@@ -97,6 +97,7 @@ To peform inference
 from tifascore import VQAModel
 
 # automatically on GPU if detect CUDA.
+# support all above VQA models. Here we use mplug-large as an example.
 model = VQAModel("mplug-large")
 
 # perform free-form VQA
@@ -107,7 +108,7 @@ print(model.vqa("sample/drawbench_8.jpg", "What is the fruit?"))
 print(model.multiple_choice_vqa("sample/drawbench_8.jpg", "What is the color of the banana?", choices=['black', 'yellow', 'red', 'green']))
 # {'free_form_answer': 'yellow', 'multiple_choice_answer': 'yellow'}
 ```
-
+In this example, the image is <img src="sample/drawbench_8.jpg" width="60">. The answer to `what is the fruit?` is `bananas`, and the answer to `what is the color of the banana?` is `yellow`.
 
 ## Question Generation Modules
 
