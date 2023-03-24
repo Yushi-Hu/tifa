@@ -26,8 +26,8 @@ Want to submit results on the leaderboard? Please email the authors.
 - [TIFA on customized benchmark](#tifa-on-customized-benchmark)
 - [VQA modules](#vqa-modules)
 - [Question Generation modules](#question-generation-modules)
---[Question Generation with GPT-3.5](#quetion-generation-with-gpt-3.5)
---[Filtering with UnifiedQA](#filter-with-unifiedqa)
+    - [Question Generation with GPT-3.5](#quetion-generation-with-gpt-3.5)
+    - [Filtering with UnifiedQA](#filter-with-unifiedqa)
 - [TIFA on arbitrary image and text](#tifa-on-arbitrary-image-and-text)
 
 ## Installation
