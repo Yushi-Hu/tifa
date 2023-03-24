@@ -54,14 +54,15 @@ To benchmark your own text-to-image model:
 
 Suppose we are benchmarking on the text inputs in `sample/sample_text_inputs.json`. The questions are in `sample/sample_question_answers.json`.
 
-1. Generate the images from TIFA v1.0 text inputs in `sample/sample_text_inputs.json`.
+1. Generate the images from `sample/sample_text_inputs.json`.
 2. Make a JSON file that points out the location of each image. We include an example `sample/sample_imgs.json`.
 3. Run the following code
 
 ```python
 from tifascore import tifa_score_benchmark
 
-# We recommend using mplug-large. Other vqa models supported: git-base, git-large, blip-base, blip-large, vilt, ofa-large, promptcap-t5large, blip2-flant5xl
+# We recommend using mplug-large. 
+#Other vqa models supported: git-base, git-large, blip-base, blip-large, vilt, ofa-large, promptcap-t5large, blip2-flant5xl
 results = tifa_score_benchmark("mplug-large", "sample/sample_question_answers.json", "sample/sample_imgs.json")
 
 # save the results. Already in the sample folder
@@ -76,8 +77,6 @@ results = tifa_score_benchmark("mplug-large", "`tifa_v1.0/tifa_v1.0_question_ans
 ```
 
 
-
-
 ## TIFA v1.0 Benchmark
 
 TIFA v1.0 text inputs are in `tifa_v1.0/tifa_v1.0_text_inputs.json` 
@@ -90,6 +89,20 @@ You can also <a href="https://raw.githubusercontent.com/Yushi-Hu/tifa/main/tifa_
 
 
 ## VQA Modules
+
+We provide easy interface to run VQA inference. The supported image-to-text models include `mplug-large, git-base, git-large, blip-base, blip-large, vilt, ofa-large, promptcap-t5large, blip2-flant5xl`
+
+To peform inference
+
+```python
+from tifascore import VQAModel
+
+# automatically on GPU if detect CUDA.
+model = VQAModel("mplug-large")
+
+# perform 
+```
+
 
 ## Question Generation Modules
 
