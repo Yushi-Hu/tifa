@@ -143,7 +143,7 @@ unifiedqa_model = UnifiedQAModel("allenai/unifiedqa-v2-t5-large-1363200")
 filtered_questions = filter_question_and_answers(unifiedqa_model, gpt3_questions)
 ```
 
-## TIFA on arbitary image and text
+## TIFA on arbitrary image and text
 
 Combining above modules, we can compute TIFA on arbitary image-text pair.
 
@@ -173,6 +173,8 @@ result = tifa_score_single(vqa_model, filtered_questions, img_path)
 print(f"TIFA score is {result['tifa_score']}")   # 0.33
 print(result)
 ```
+
+In this example, TIFA score between the text `a black colored banana` and <img src="sample/drawbench_8.jpg" width="60"> is 0.33.
 
 
 ## Details: The text inputs format and the question-answer pairs format
