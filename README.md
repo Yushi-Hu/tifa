@@ -69,7 +69,7 @@ with open("sample/sample_evaluation_result.json", "w") as f:
     json.dump(results, f, indent=4)
 ```
 
-### Benchmakr on TIFA v1.0 benchmark
+### Benchmark on TIFA v1.0 benchmark
 To evaluate on TIFA v1.0 benchmark, generate images for text inputs in `tifa_v1.0/tifa_v1.0_text_inputs.json`. and run
 ```python
 results = tifa_score_benchmark("mplug-large", "`tifa_v1.0/tifa_v1.0_question_answers.json", "[YOUR IMAGE PATH]")
@@ -111,12 +111,12 @@ print(model.multiple_choice_vqa("sample/drawbench_8.jpg", "What is the color of 
 
 ## Question Generation Modules
 
-TIFA allos users to generate questions on their own text inputs. The question generation contains two part. First is question generation with GPT-3. And then we filter the questions with UnifiedQA.
-We will release a fine-tuned FlanT5 so that the users without OpenAI API can generate questions locally. However, the question quality will be lower than GPT-3 generated one.
+TIFA allows users to generate questions on their own text inputs. The question generation contains two part. First is question generation with GPT-3. And then we filter the questions with UnifiedQA.
+We will release a fine-tuned Flan-T5 model so that the users can generate questions locally without OpenAI API. However, the question quality will be lower than GPT-3 generated ones.
 
 ### Question generation with GPT 3.5
 
-Notice that since code-davinci-002 is deprecated, we rewrite our code with gpt-3.5-turbo. Since the input length limit is 4097, which is smaller than Codex's, we reduced the number of in-context examples. Thus, the questions will be slightly different from the ones in TIFA v1.0 benchmark.
+Notice that since code-davinci-002 is deprecated, we rewrite our code with gpt-3.5-turbo. Since the input length limit is 4097, which is smaller than Codex's, we reduce the number of in-context examples in the current codebase. Thus, the questions will be slightly different from the ones in TIFA v1.0 benchmark.
 
 ```python
 import openai
