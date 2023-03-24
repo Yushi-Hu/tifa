@@ -4,6 +4,9 @@ This repository contains the code and models for our paper [TIFA: Accurate and I
 
 <img src="static/tifa_webteaser2.png" width="800">
 
+#### Why TIFA?
+We have pre-generated the questions with OpenAI APIs, such that users only need to run a VQA model in this repo to benchmark their text-to-image models. Our research shows that TIFA is much more accurate than CLIP, while being fine-grained and interpretable. Meanwhile, this repo provides tools to let users to customize their own TIFA benchmark.
+
 ## Components (Coming soon in two days!)
 
 1. TIFA v1.0 benchmark
