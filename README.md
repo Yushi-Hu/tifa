@@ -153,25 +153,25 @@ import openai
 
 openai.api_key = "[Your OpenAI Key]"
 unifiedqa_model = UnifiedQAModel("allenai/unifiedqa-v2-t5-large-1363200")
-    vqa_model = VQAModel("mplug-large")
+vqa_model = VQAModel("mplug-large")
     
     
-    img_path = "sample/drawbench_8.jpg"
-    text = "a black colored banana."
+img_path = "sample/drawbench_8.jpg"
+text = "a black colored banana."
     
-    # Generate questions with GPT-3.5-turbo
-    gpt3_questions = get_question_and_answers(text)
+# Generate questions with GPT-3.5-turbo
+gpt3_questions = get_question_and_answers(text)
     
-    # Filter questions with UnifiedQA
-    filtered_questions = filter_question_and_answers(unifiedqa_model, gpt3_questions)
+# Filter questions with UnifiedQA
+filtered_questions = filter_question_and_answers(unifiedqa_model, gpt3_questions)
     
-    # See the questions
-    print(filtered_questions)
+# See the questions
+print(filtered_questions)
 
-    # calucluate TIFA score
-    result = tifa_score_single(vqa_model, filtered_questions, img_path)
-    print(f"TIFA score is {result['tifa_score']}")   # 0.33
-    print(result)
+# calucluate TIFA score
+result = tifa_score_single(vqa_model, filtered_questions, img_path)
+print(f"TIFA score is {result['tifa_score']}")   # 0.33
+print(result)
 ```
 
 
