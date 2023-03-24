@@ -201,7 +201,7 @@ The question and answers are organized as follows:
             "no"
         ],
         "answer": "yes",
-        "answer_type": "animal/human",       # the element type
+        "element_type": "animal/human",       # the element type
         "element": "surfer",                 # the element the question is about
         "coco_val_id": "380711"              # for COCO captions only. the COCO image id corresponding to the caption
     },
