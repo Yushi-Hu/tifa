@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='tifa-benchmark',
-    version='1.0.0',    
+    name='tifascore',
+    version='1.0.1',    
     description='TIFA: Text-to-Image Faithfulness Evaluation with Question Answering',
     url='https://github.com/Yushi-Hu/tifa',
     author='Yushi Hu',
     license='Apache License 2.0',
-    packages=find_packages("tifa"),
+    packages=find_packages("tifascore"),
     install_requires=['numpy',
                       'torch',
                       'tqdm',
