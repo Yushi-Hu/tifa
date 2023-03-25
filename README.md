@@ -5,7 +5,7 @@ This repository contains the code and models for our paper [TIFA: Accurate and I
 <img src="static/tifa_webteaser2.png" width="800">
 
 #### Do I need OpenAI API to run TIFA?
-No. We have pre-generated the questions with OpenAI APIs, such that users only need to run the VQA models in this repo to benchmark their text-to-image models. 
+No. We have pre-generated the questions with OpenAI APIs, such that users only need to run the VQA models in this repo to benchmark their text-to-image models. In addition, this repo also provide tools to generate your own questions with GPT-3.5
 
 #### Why TIFA?
 TIFA is much more accurate than CLIP, while being fine-grained and interpretable. It is an ideal choice for fine-grained automatic evaluation of image generation. Meanwhile, this repo also provides tools to allow users to customize their own TIFA benchmark.
