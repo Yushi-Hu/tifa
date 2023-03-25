@@ -221,12 +221,11 @@ The question and answers are organized as follows:
 If you find our work helpful, please cite us:
 
 ```bibtex
-@article{Hu2023TIFAAA,
+@article{hu2023tifa,
   title={TIFA: Accurate and Interpretable Text-to-Image Faithfulness Evaluation with Question Answering},
-  author={Yushi Hu and Benlin Liu and Jungo Kasai and Yizhong Wang and Mari Ostendorf and Ranjay Krishna and Noah A. Smith},
-  journal={ArXiv},
-  year={2023},
-  volume={abs/2303.11897}
+  author={Hu, Yushi and Liu, Benlin and Kasai, Jungo and Wang, Yizhong and Ostendorf, Mari and Krishna, Ranjay and Smith, Noah A},
+  journal={arXiv preprint arXiv:2303.11897},
+  year={2023}
 }
 ```
 
