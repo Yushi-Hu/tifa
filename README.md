@@ -83,6 +83,9 @@ results = tifa_score_benchmark("mplug-large", "`tifa_v1.0/tifa_v1.0_question_ans
 
 ## TIFA v1.0 Benchmark
 
+<img src="static/tifa_benchmark_new.png" width="800">
+
+
 TIFA v1.0 text inputs are in `tifa_v1.0/tifa_v1.0_text_inputs.json` 
 
 You can also <a href="https://raw.githubusercontent.com/Yushi-Hu/tifa/main/tifa_v1.0/tifa_v1.0_text_inputs.json" download>Download here</a>
