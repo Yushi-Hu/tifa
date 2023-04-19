@@ -32,9 +32,10 @@ Want to submit results on the leaderboard? Please email the authors.
 - [Installation](#Installation)
 - [Quick Start](#quick-start)
 - [TIFA v1.0 Benchmark](#tifa-v10-benchmark)
+- [TIFA v1.0 Human Annotations on Text-to-Image Faithufulness](#tifa-v10-human-annotations)
 - [VQA modules](#vqa-modules)
 - [Question Generation modules](#question-generation-modules)
-    - [Question Generation with GPT-3.5](#quetion-generation-with-gpt-35)
+    - [Question Generation with GPT-3.5](#question-generation-with-gpt-35)
     - [Filtering with UnifiedQA](#filter-with-unifiedqa)
 - [TIFA on arbitrary image and text](#tifa-on-arbitrary-image-and-text)
 
@@ -99,7 +100,7 @@ The GPT-3 pre-generated TIFA v1.0 question and answers are in `tifa_v1.0/tifa_v1
 You can also <a href="https://raw.githubusercontent.com/Yushi-Hu/tifa/main/tifa_v1.0/tifa_v1.0_question_answers.json" download>Download here</a>
 
 
-## TIFA v1.0 Human annotations
+## TIFA v1.0 Human Annotations
 We release the human annotations on text-to-image faithufulness in `human_annotations` to facilitate future research in this direction. Refer to the readme in the directory for details.
 
 
@@ -131,7 +132,7 @@ In this example, the image is <img src="sample/drawbench_8.jpg" width="60">. The
 TIFA allows users to generate questions on their own text inputs. The question generation contains two part. First is question generation with GPT-3. And then we filter the questions with UnifiedQA.
 We will release a fine-tuned Flan-T5 model so that the users can generate questions locally without OpenAI API. However, the question quality will be lower than GPT-3 generated ones.
 
-### Question generation with GPT 3.5
+### Question generation with GPT-3.5
 
 Notice that since code-davinci-002 is deprecated, we rewrite our code with gpt-3.5-turbo. Since the input length limit is 4097, which is smaller than Codex's, we reduce the number of in-context examples in the current codebase. Thus, the questions will be slightly different from the ones in TIFA v1.0 benchmark.
 
