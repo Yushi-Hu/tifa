@@ -20,6 +20,7 @@ Want to submit results on the leaderboard? Please email the authors.
 **************************** **Updates** ****************************
 
 * TODO: Release Flan-T5 fine-tuned for question generation so that users can generate questions without OpenAI API. Release Huggingface demo.
+* 04/19: We released the human judgment scores on text-to-image faithufulness used in Table 2.
 * 03/24: We released the evaluation package, which includes evaluation code, VQA modules, and question generation modules
 * 03/22: We released the TIFA v1.0 captions, questions.
 
@@ -36,17 +37,17 @@ Want to submit results on the leaderboard? Please email the authors.
 
 ## Installation
 
-The code and dependencies can be installed by PyPI
+The code and dependencies can be easily installed by PyPI
 ```bash
 pip install tifascore
 ```
 
-If you want to access the examples in this repo, clone it:
+If you want to access the data, annotations, and examples in this repo, clone it:
 ```bash
 git clone https://github.com/Yushi-Hu/tifa.git
 ```
 
-Or you can manually build it from this repo
+you can also build TIFA from this repo if you want to customize it
 ```bash
 pip install -r requirements.txt
 pip install -e .
@@ -95,9 +96,13 @@ The GPT-3 pre-generated TIFA v1.0 question and answers are in `tifa_v1.0/tifa_v1
 You can also <a href="https://raw.githubusercontent.com/Yushi-Hu/tifa/main/tifa_v1.0/tifa_v1.0_question_answers.json" download>Download here</a>
 
 
+## TIFA v1.0 Human annotations
+We release the human annotations on text-to-image faithufulness in `human_annotations` to facilitate future research in this direction. Refer to the readme in the directory for details.
+
+
 ## VQA Modules
 
-We provide easy interface to run VQA inference. The supported image-to-text models include `mplug-large, git-base, git-large, blip-base, blip-large, vilt, ofa-large, promptcap-t5large, blip2-flant5xl`
+We provide easy interface to run VQA inference. The supported image-to-text models include `mplug-large, git-base, git-large, blip-base, blip-large, vilt, ofa-large, promptcap-t5large, blip2-flant5xl`. You can also customize your own VQA models in `tifascore/vqa_models.py`.
 
 To peform inference
 
@@ -185,40 +190,6 @@ print(result)
 
 In this example, TIFA score between the text `a black colored banana` and <img src="sample/drawbench_8.jpg" width="60"> is 0.33.
 
-
-## Details: The text inputs format and the question-answer pairs format
-
-The text inputs are organized as follows:
-```console
-[
-    {
-        "id": "coco_301091",    # the unique text id
-        "caption": "On a gray day a surfer carrying a white board walks on a beach.",     # the text
-        "coco_val_id": "380711"    # for COCO captions only. The COCO image id corresponding to the caption
-    },
-    ...
-]
-```
-
-The question and answers are organized as follows:
-```console
-[
-    {
-        "id": "coco_301091",    # the unique text id, correspond to the text inputs file
-        "caption": "On a gray day a surfer carrying a white board walks on a beach.",    # the text
-        "question": "is this a surfer?",
-        "choices": [
-            "yes",
-            "no"
-        ],
-        "answer": "yes",
-        "element_type": "animal/human",       # the element type
-        "element": "surfer",                 # the element the question is about
-        "coco_val_id": "380711"              # for COCO captions only. the COCO image id corresponding to the caption
-    },
-    ...
-]
-```
 
 ## Citation
 If you find our work helpful, please cite us:
