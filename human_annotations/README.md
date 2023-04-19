@@ -5,3 +5,5 @@ This folder contains the human annotations for 800 tifa_v1.0 images synthesized 
 
 
 `human_annotations.json` contains the human annotation scores. `human_annotations_with_scores.json` contains the human scores + the scores given by caption-based metrics, clipscore, and tifa scores with various VQA models.
+
+`compute_correlation.ipynb` contains the code to compute the correlations between human scores and automatic metrics.
