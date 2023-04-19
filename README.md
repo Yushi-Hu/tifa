@@ -1,7 +1,7 @@
 # TIFA: Accurate and Interpretable Text-to-Image Faithfulness Evaluation with Question Answering
 
 #### What is TIFA?
-Images synthesized by text-to-image AIs often do not follow the text inputs well.
+Images synthesized by text-to-image models (e.g. Stable Diffusion) often do not follow the text inputs well.
 TIFA is a simple tool to evaluate the fine-grained alignment between the text and the image.
 This repository contains the code and models for our paper [TIFA: Accurate and Interpretable Text-to-Image Faithfulness Evaluation with Question Answering](https://arxiv.org/abs/2303.11897). Please refer to the [project page](https://tifa-benchmark.github.io/) for a quick overview.
 
