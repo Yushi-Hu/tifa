@@ -82,7 +82,11 @@ with open("sample/sample_evaluation_result.json", "w") as f:
 ### Benchmark on TIFA v1.0 benchmark
 To evaluate on TIFA v1.0 benchmark, generate images for text inputs in `tifa_v1.0/tifa_v1.0_text_inputs.json`. and run
 ```python
-results = tifa_score_benchmark("mplug-large", "`tifa_v1.0/tifa_v1.0_question_answers.json", "[YOUR IMAGE PATH]")
+results = tifa_score_benchmark("mplug-large", "tifa_v1.0/tifa_v1.0_question_answers.json", "[YOUR IMAGE PATH]")
+
+# save the results
+with open("sample/sample_evaluation_result.json", "w") as f:
+    json.dump(results, f, indent=4)
 ```
 
 
