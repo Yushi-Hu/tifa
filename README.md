@@ -159,7 +159,7 @@ from tifascore import get_llama2_pipeline, get_llama2_question_and_answers
 
 pipeline = get_llama2_pipeline("tifa-benchmark/llama2_tifa_question_generation")
 
-llama2_questions = get_llama2_question_and_answers(pipeline, "a blue rabbit and a red plane")
+llama2_questions = get_llama2_question_and_answers(pipeline, "a black colored banana.")
 # llama2_questions has the same format as the gpt3_questions
 ```
 
