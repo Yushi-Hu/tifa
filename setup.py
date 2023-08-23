@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='tifascore',
-    version='1.0.1',    
+    version='1.1.0',    
     description='TIFA: Text-to-Image Faithfulness Evaluation with Question Answering',
     url='https://github.com/Yushi-Hu/tifa',
     author='Yushi Hu',
