@@ -36,7 +36,7 @@ Want to submit results on the leaderboard? Please email the authors.
 - [VQA modules](#vqa-modules)
 - [Question Generation modules](#question-generation-modules)
     - [Question Generation with GPT-3.5](#question-generation-with-gpt-35)
-    - [Alternative: Question Generation with LLaMA 2](#question-generation-with-llama2)
+    - [Alternative: Question Generation with LLaMA 2](#question-generation-with-llama-2)
     - [Filtering with UnifiedQA](#filter-with-unifiedqa)
 - [TIFA on arbitrary image and text](#tifa-on-arbitrary-image-and-text)
 
