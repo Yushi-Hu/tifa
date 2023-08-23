@@ -22,7 +22,7 @@ Want to submit results on the leaderboard? Please email the authors.
 
 **************************** **Updates** ****************************
 
-* TODO: Release Flan-T5 fine-tuned for question generation so that users can generate questions without OpenAI API. Release Huggingface demo.
+* 08/22: We released the LLaMA 2 fine-tuned for question generation so that users can generate questions without OpenAI API.
 * 04/19: We released the human judgment scores on text-to-image faithufulness used in Table 2.
 * 03/24: We released the evaluation package, which includes evaluation code, VQA modules, and question generation modules
 * 03/22: We released the TIFA v1.0 captions, questions.
@@ -36,18 +36,16 @@ Want to submit results on the leaderboard? Please email the authors.
 - [VQA modules](#vqa-modules)
 - [Question Generation modules](#question-generation-modules)
     - [Question Generation with GPT-3.5](#question-generation-with-gpt-35)
+    - [Alternative: Question Generation with LLaMA 2](#question-generation-with-llama2)
     - [Filtering with UnifiedQA](#filter-with-unifiedqa)
 - [TIFA on arbitrary image and text](#tifa-on-arbitrary-image-and-text)
 
 ## Installation
 
-Clone the repo:
+Clone and build the repo:
 ```bash
 git clone https://github.com/Yushi-Hu/tifa.git
-```
-
-you can also build TIFA from this repo if you want to customize it
-```bash
+cd tifa
 pip install -r requirements.txt
 pip install -e .
 ```
@@ -150,6 +148,19 @@ openai.api_key = "[Your OpenAI Key]"
 text = "a black colored banana."
 gpt3_questions = get_question_and_answers(text)
 # gpt3_questions is a list of question answer pairs with the same format as sample/sample_question_answers.json
+```
+
+### Question generation with LLaMA 2
+
+We also provide an alternative way to generate questions using our fine-tuned LLaMA 2. The question quality are similar to the GPT-3 generated ones, and it is fully open and reproducible. The huggingface link is <https://huggingface.co/tifa-benchmark/llama2_tifa_question_generation/>
+
+```python
+from tifascore import get_llama2_pipeline, get_llama2_question_and_answers
+
+pipeline = get_llama2_pipeline("tifa-benchmark/llama2_tifa_question_generation")
+
+llama2_questions = get_llama2_question_and_answers(pipeline, "a blue rabbit and a red plane")
+# llama2_questions has the same format as the gpt3_questions
 ```
 
 ### Filter with UnifiedQA

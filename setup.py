@@ -14,7 +14,7 @@ setup(
                       'word2number',
                       'Pillow',
                       'openai>=0.27.2',
-                      'transformers>=4.27.3',
+                      'transformers>=4.31.0',
                       'fairseq',
                       'evaluate',
                       'salesforce-lavis',
