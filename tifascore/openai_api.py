@@ -3,7 +3,9 @@ import time, sys
 
 
 def openai_completion(prompt, engine="gpt-3.5-turbo", max_tokens=700, temperature=0):
-    resp =  openai.ChatCompletion.create(
+    client = openai.OpenAI()
+    
+    resp =  client.chat.completions.create(
         model=engine,
         messages=[{"role": "user", "content": prompt}],
         max_tokens=max_tokens,
