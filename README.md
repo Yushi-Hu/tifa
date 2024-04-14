@@ -22,6 +22,7 @@ Want to submit results on the leaderboard? Please email the authors.
 
 **************************** **Updates** ****************************
 
+* 04/14/24: We updated the openai completion function to make it compatible with latest openai APIs. 
 * 08/22: We released the LLaMA 2 fine-tuned for question generation so that users can generate questions without OpenAI API.
 * 04/19: We released the human judgment scores on text-to-image faithufulness used in Table 2.
 * 03/24: We released the evaluation package, which includes evaluation code, VQA modules, and question generation modules
