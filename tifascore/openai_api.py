@@ -13,7 +13,7 @@ def openai_completion(prompt, engine="gpt-3.5-turbo", max_tokens=700, temperatur
         stop=["\n\n", "<|endoftext|>"]
         )
     
-    return resp['choices'][0]['message']['content']
+    return resp.choices[0].message.content
 
 
 
