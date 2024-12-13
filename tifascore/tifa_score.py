@@ -3,6 +3,7 @@ from collections import defaultdict
 from tqdm import tqdm
 from .vqa_models import VQAModel
 from statistics import mean, stdev
+import copy
 
 def tifa_score_benchmark(vqa_model_name, question_answer_path, id2img_path):
     
@@ -85,7 +86,7 @@ def tifa_score_single(vqa_model, question_answer_pairs, img_path):
         
         # read the question, choices, and answers
         if question_answer_pair['question'] not in question_logs:
-            question_logs[question_answer_pair['question']] = question_answer_pair
+            question_logs[question_answer_pair['question']] = copy.deepcopy(question_answer_pair)
         choices=question_answer_pair['choices']
             
         # get VQA answer

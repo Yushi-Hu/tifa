@@ -56,16 +56,20 @@ def parse_resp(resp):
     for line_number in range(6, len(resp)):
         line = resp[line_number]
         if line.startswith('About '):
-            whole_line = line[len('About '):-1]
-            this_entity = whole_line.split(' (')[0]
-            this_type = whole_line.split(' (')[1].split(')')[0]
+            if '(' in line and ')' in line:
+                whole_line = line[len('About '):-1]
+                this_entity = whole_line.split(' (')[0]
+                this_type = whole_line.split(' (')[1].split(')')[0]
 
         elif line.startswith('Q: '):
-            this_question = line[3:]
+            if len(line) > 3:
+                this_question = line[3:]
         elif line.startswith('Choices: '):
-            this_choices = line[9:].split(', ')
+            if len(line) > 9  and ',' in line:
+                this_choices = line[9:].split(', ')
         elif line.startswith('A: '):
-            this_answer = line[3:]
+            if len(line) > 3:
+                this_answer = line[3:]
 
             if this_entity and this_question and this_choices:
                 question_instances.append(
